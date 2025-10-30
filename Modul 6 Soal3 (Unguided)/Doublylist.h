@@ -1,6 +1,5 @@
 #ifndef DOUBLYLIST_H
 #define DOUBLYLIST_H
-
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -18,27 +17,24 @@ struct ElmList {
     address next;
     address prev;
 };
+
 struct List {
     address First;
     address Last;
 };
 
-// procedure CreateList
 void CreateList(List &L);
-
-// function alokasi
 address alokasi(kendaraan x);
-
-// procedure dealokasi
 void dealokasi(address &P);
-
-// procedure printInfo
 void printInfo(List L);
-
-// procedure insertLast
 void insertLast(List &L, address P);
-
-// function search
 address search(List L, std::string nopol_target);
+
+
+void deleteFirst(List &L, address &P);
+
+void deleteLast(List &L, address &P);
+
+void deleteAfter(List &L, address Prec, address &P);
 
 #endif
